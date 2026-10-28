@@ -1,0 +1,1 @@
+-- Data dasar sintetis ditambahkan bersama fondasi database.

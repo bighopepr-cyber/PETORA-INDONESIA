@@ -1,0 +1,21 @@
+{
+  "name": "@petora/contracts",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./format": "./src/format.ts"
+  },
+  "scripts": {
+    "test:unit": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@petora/config": "workspace:*",
+    "typescript": "~5.7.3",
+    "vitest": "^3.2.4"
+  }
+}

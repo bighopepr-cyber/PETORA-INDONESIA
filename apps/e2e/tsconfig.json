@@ -1,0 +1,4 @@
+{
+  "extends": "@petora/config/tsconfig/base.json",
+  "include": ["playwright.config.ts", "tests/**/*.ts"]
+}

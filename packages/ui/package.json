@@ -1,0 +1,19 @@
+{
+  "name": "@petora/ui",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^19.1.1"
+  },
+  "devDependencies": {
+    "@petora/config": "workspace:*",
+    "@types/react": "^19.1.13",
+    "typescript": "~5.7.3"
+  }
+}

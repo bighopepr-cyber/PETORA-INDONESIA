@@ -1,0 +1,31 @@
+{
+  "name": "petora",
+  "private": true,
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=22 <23",
+    "pnpm": ">=9 <10"
+  },
+  "scripts": {
+    "build": "turbo run build --filter=web...",
+    "db:new": "node scripts/new-migration.mjs",
+    "db:reset": "supabase db reset",
+    "db:types": "supabase gen types typescript --local > packages/db-types/src/index.ts",
+    "dev": "turbo run dev --filter=web",
+    "lint": "eslint . && prettier --check .",
+    "supabase:env": "node scripts/supabase-env.mjs",
+    "supabase:start": "supabase start && supabase db reset",
+    "test:e2e": "pnpm --filter e2e test:e2e",
+    "test:integration": "supabase test db",
+    "test:unit": "turbo run test:unit",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@petora/config": "workspace:*",
+    "eslint": "^9.36.0",
+    "prettier": "^3.6.2",
+    "supabase": "^2.122.0",
+    "turbo": "^2.5.8",
+    "typescript": "~5.7.3"
+  }
+}
